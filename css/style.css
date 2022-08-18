@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+    background-color: #E0DDDD;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
+}
+
+#gallery img {
+    width: 25%;
+    height: 300px;
+    background-color: #EBE7E7;
+    object-fit: cover;  /* you can use the object-fit property to determine how images should behave.
+
+    Give your #gallery img selector the object-fit property and set it to cover. This will tell the image to fill the img container while maintaining aspect ratio, resulting in cropping to fit. */
+
+    margin-top: 8px;
+    padding: 0 4px;;
+}
+
+@media (max-width: 800px) {
+    #gallery img {
+        width: 50%;      /* This will give your gallery a two-column layout. */
+    }
+}
+
+@media (max-width: 600px) {
+    #gallery img {
+        width: 100%;      /* This will give your gallery a single-column layout. */
+    }
+}
